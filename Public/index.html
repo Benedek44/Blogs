@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blog Kezelő</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Blog bejegyzések</h1>
+    <button onclick="openEditor()" id="newPost">Új bejegyzés</button>
+    <div class="blog-container" id="blogContainer"></div>
+
+    <div id="editorPopup">
+      <div id="editor">
+        <h2 id="formTitle">Új blogbejegyzés</h2>
+        <input type="hidden" id="blogId" />
+
+        <label for="title"><strong>Cím:</strong></label>
+        <input type="text" id="title" placeholder="Írd be a címet..." />
+
+        <label for="category"><strong>Kategória:</strong></label>
+        <input type="text" id="category" placeholder="Írd be a kategóriát..." />
+
+        <label for="content"><strong>Tartalom:</strong></label>
+        <textarea
+          id="content"
+          rows="6"
+          placeholder="Írd ide a bejegyzés szövegét..."
+        ></textarea>
+
+        <label for="author"><strong>Szerző:</strong></label>
+        <select id="author">
+          <option value="">Válassz szerzőt</option>
+        </select>
+
+        <button onclick="saveBlog()">Mentés</button>
+        <button onclick="closeEditor()">Mégse</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
